@@ -771,7 +771,7 @@ bool cthd_parse::platform_matched() {
 		for (unsigned int i = 0; i < thermal_info_list.size(); ++i) {
 			if (!thermal_info_list[i].uuid.size())
 				continue;
-			string_trim(line);
+			// string_trim(line);
 			thd_log_debug("config product uuid [%s] match with [%s]\n",
 					thermal_info_list[i].uuid.c_str(), line.c_str());
 			if (thermal_info_list[i].uuid == "*") {
@@ -793,7 +793,7 @@ bool cthd_parse::platform_matched() {
 		for (unsigned int i = 0; i < thermal_info_list.size(); ++i) {
 			if (!thermal_info_list[i].product_name.size())
 				continue;
-			string_trim(line);
+			// string_trim(line);
 			thd_log_debug("config product name [%s] match with [%s]\n",
 					thermal_info_list[i].product_name.c_str(), line.c_str());
 			if (thermal_info_list[i].product_name == "*") {

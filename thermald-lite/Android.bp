@@ -1,0 +1,18 @@
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+cc_binary {
+    name: "thermald-lite",
+    recovery_available: true,
+    srcs: ["thermald_lite.cpp"],
+    cflags: [
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+    ],
+    shared_libs: ["libbase","libcutils"],
+    sanitize: {
+        misc_undefined: ["signed-integer-overflow"],
+    },
+}
